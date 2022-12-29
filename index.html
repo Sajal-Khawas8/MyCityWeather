@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MyCityWeather</title>
+    <link rel="shortcut icon" href="./icon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body style="background-color: #d7d7ff;">
+    <nav class="navbar bg-body-tertiary" style="height: 10vh;">
+        <div class="container-fluid">
+            <a class="navbar-brand">MyCityWeather</a>
+            <form class="d-flex" role="search">
+                <input id="city" class="form-control me-2" type="search" placeholder="Search your City"
+                    aria-label="Enter the City">
+                <button id="search" class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <h1 class="text-center mt-3">Weather of <span id="displayCity"></span></h1>
+
+    <div class="main d-flex justify-content-center">
+        <div class="d-flex flex-column">
+            <div class="card text-center m-5" style="width: 12rem; background-color: #acd6de5c;">
+                <div class="card-body">
+                    <h5 class="card-title" id="feelsLikeTemp"></h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Real Feel</h6>
+                </div>
+            </div>
+            <div class="card text-center m-5" style="width: 12rem; background-color: #acd6de5c;">
+                <div class="card-body">
+                    <h5 class="card-title" id="relHumidity"></h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Humidity</h6>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center align-items-center">
+            <div class="card mx-5" style="width: 21rem; height: 12rem; background-color: #acd6de87;">
+                <div class="card-body align-items-center d-flex flex-column
+                    justify-content-center">
+                    <h3 class="card-title" id="temp"></h3>
+                    <h5 class="card-text mt-2">Temperature</h5>
+                    <h4 class="card-text mt-2" id="symbolPhrase"></h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex flex-column">
+            <div class="card text-center m-5" style="width: 12rem; background-color: #acd6de5c;">
+                <div class="card-body">
+                    <h5 class="card-title" id="wind"></h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Wind</h6>
+                </div>
+            </div>
+            <div class="card text-center m-5" style="width: 12rem; background-color: #acd6de5c;">
+                <div class="card-body">
+                    <h5 class="card-title" id="visibility"></h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Visbility</h6>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <h2 class="text-center">7 Days Forecast</h2>
+    <table class="table text-center">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Weather</th>
+                <th scope="col">Min Temp</th>
+                <th scope="col">Max Temp</th>
+                <th scope="col">Sunrise</th>
+                <th scope="col">Sunset</th>
+                <th scope="col">Moonrise</th>
+                <th scope="col">Moonset</th>
+                <th scope="col">Min Humidity</th>
+                <th scope="col">Max Humidity</th>
+                <th scope="col">wind</th>
+                <th scope="col">Visibility</th>
+                <th scope="col">Pressure</th>
+                <th scope="col">UV Index</th>
+            </tr>
+        </thead>
+        <tbody id="7dayForecast">
+
+        </tbody>
+    </table>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
