@@ -59,7 +59,7 @@ function getWeather(city) {
                                 <td>${response.forecast[i].minRelHumidity}%</td>
                                 <td>${response.forecast[i].maxRelHumidity}%</td>
                                 <td>${response.forecast[i].maxWindSpeed} km/s ${directions[Math.round(response.forecast[i].windDir / 45) % 8]}</td>
-                                <td>${response.forecast[i].minVisibility} m</td>
+                                <td>${Math.round(response.forecast[i].minVisibility / 1000)} km</td>
                                 <td>${response.forecast[i].pressure} hPa</td>
                                 <td>${response.forecast[i].uvIndex}</td>
                             </tr>`;
