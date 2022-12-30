@@ -34,7 +34,7 @@ function getWeather(city) {
                     feelsLikeTemp.innerHTML = `${response.current.feelsLikeTemp} &#8451;`;
                     wind.innerHTML = `${response.current.windSpeed} km/h ${response.current.windDirString}`;
                     relHumidity.innerHTML = `${response.current.relHumidity}%`;
-                    visibility.innerHTML = `${response.current.visibility} m`;
+                    visibility.innerHTML = `${Math.round(response.current.visibility / 1000)} km`;
                     displayCity.innerHTML = city;
                 })
                 .catch(err => console.error(err));
